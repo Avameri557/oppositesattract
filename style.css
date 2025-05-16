@@ -1,0 +1,176 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* Basic components */
+.background {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    font-size: 50px;
+    color: rgb(217,217,217);
+    cursor: pointer;
+    user-select: none;
+}
+
+.button {
+    text-decoration: none;
+}
+
+.left {
+    margin-right: 60px;
+}
+
+.right {
+    margin-left: 60px;
+}
+
+/* Start page */
+.start {
+    background-image: url('images/background.jpg'); 
+}
+
+.card {
+    background: rgb(217,217,217);
+    border-radius: 50%;
+    width: 480px;
+    height: 480px;
+    padding: 70px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Info pages */
+.nav{
+    background-color: rgb(38,38,38);
+}
+
+.image-card {
+    background: rgb(217,217,217);
+    border-radius: 50%;
+    border:5px dashed rgb(217,217,217);
+    width: 610px;
+    height: 610px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.yin-yang {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.upper {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.lower {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.chaos {
+    background-color: rgb(187,85,111);
+    color: rgb(38,38,38);
+}
+
+.order {
+    background-color: rgb(97,174,182);
+    color: rgb(38,38,38);
+}
+
+.day {
+    background-color: rgb(72,131,166);
+    color: rgb(38,38,38);
+}
+
+.night {
+    background-color: rgb(39,29,52);
+    color: rgb(217,217,217);
+}
+
+.short-panel {
+    height: 100%;
+    flex: 3;
+    background-color: rgb(38,38,38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.theme-panel {
+    height: 100%;
+    flex: 5;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-text {
+    width: 60%;
+}
+
+.image-wrapper-left {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.image-wrapper-right {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.right-align {
+    text-align: right;
+    margin-left: auto;
+    padding-left: 30px;
+}
+
+.left-align {
+    text-align: left;
+    margin-right: auto;
+    padding-right: 30px;
+}

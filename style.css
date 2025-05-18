@@ -1,11 +1,11 @@
-body, html {
+/* Setup and general components */
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, sans-serif;
+    font-size: min(2vw, 3vh, 1rem);
 }
 
-/* Basic components */
 .background {
     background-size: cover;
     background-position: center;
@@ -15,11 +15,31 @@ body, html {
     align-items: center;
 }
 
-.container {
-    position: relative;
+.right-aligned {
+    text-align: right;
+    justify-content: right;
+}
+
+.left-aligned {
+    text-align: left;
+    justify-content: left;
+}
+
+/* Navigation page components */
+.start {
+    background-image: url('images/background.jpg'); 
+}
+
+.nav{
+    background-color: rgb(38,38,38);
+}
+
+.nav-container {
     width: 80%;
-    max-width: 1200px;
+    height: 100%;
+
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
 }
@@ -35,51 +55,42 @@ body, html {
     text-decoration: none;
 }
 
-.left {
-    margin-right: 60px;
-}
-
-.right {
-    margin-left: 60px;
-}
-
-/* Start page */
-.start {
-    background-image: url('images/background.jpg'); 
-}
-
-.card {
+.text-card {
     background: rgb(217,217,217);
     border-radius: 50%;
-    width: 480px;
-    height: 480px;
-    padding: 70px;
-    text-align: center;
-    position: relative;
+    
+    width: min(80%, 80vh, 480px);
+    aspect-ratio: 1/1;
+    padding: min(10%, 10vh, 70px);
+
     display: flex;
+    text-align: center;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-.profile-pic {
-    width: 120px;
-    height: 120px;
+.pfp {
+    width: 25%;
+    height: 25%;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-/* Info pages */
-.nav{
-    background-color: rgb(38,38,38);
+.inline-link {
+    height: 1em;
+    vertical-align: -0.15em;
 }
 
+/* Yin-Yang components */
 .image-card {
     background: rgb(217,217,217);
     border-radius: 50%;
     border:5px dashed rgb(217,217,217);
-    width: 610px;
-    height: 610px;
+
+    height: min(90%, 45vw, 610px);
+    aspect-ratio: 1/1;
+
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -104,6 +115,32 @@ body, html {
     transform: rotate(180deg);
 }
 
+.left-side {  
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.right-side {  
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+/* Information page components */
+.short-panel {
+    height: 100vh;
+    flex: 1;
+    padding: 0px min(4%, 60px);
+    background-color: rgb(38,38,38);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .chaos {
     background-color: rgb(187,85,111);
     color: rgb(38,38,38);
@@ -124,53 +161,33 @@ body, html {
     color: rgb(217,217,217);
 }
 
-.short-panel {
-    height: 100%;
-    flex: 3;
-    background-color: rgb(38,38,38);
+.theme-panel {
+    height: 100vh;
+    flex: 2;
+    padding: 0px min(4%, 60px);
+
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
 }
 
-.theme-panel {
+.scrollable {
+    overflow-y: auto;
+    padding: 2rem;
     height: 100%;
-    flex: 5;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .info-text {
+    max-height: 65%;
     width: 60%;
 }
 
-.image-wrapper-left {
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.info-img {
+    width: 100%;
+    border: 5px solid rgb(217,217,217);
 }
 
-.image-wrapper-right {
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.right-align {
-    text-align: right;
-    margin-left: auto;
-    padding-left: 30px;
-}
-
-.left-align {
-    text-align: left;
-    margin-right: auto;
-    padding-right: 30px;
+.info-video {
+    width: 100%;
+    height: 50%;
+    border: 5px solid rgb(217,217,217);
 }

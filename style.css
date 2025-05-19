@@ -25,6 +25,66 @@ body {
     justify-content: left;
 }
 
+/* Simple animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.left-transition {
+    animation: fade-in-left 0.5s ease-out;
+}
+
+.right-transition {
+    animation: fade-in-right 0.5s ease-out;
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease-out;
+}
+
+.dynamic-scale {
+    transition: transform 0.3s ease;
+}
+
+.dynamic-scale:hover {
+    transform: scale(1.1);
+}
+
+.dynamic-colour {
+    transition: color 0.3 ease;
+}
+
+.dynamic-colour:hover {
+    color: rgb(60,90,131)
+}
+
 /* Navigation page components */
 .start {
     background-image: url('images/background.jpg'); 
@@ -93,7 +153,6 @@ body {
 
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .yin-yang {
